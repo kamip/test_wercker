@@ -19,7 +19,9 @@ deploy:
     steps:
         - script:
             name: make .ssh directory
-            code: mkdir -p "$HOME/.ssh"
+            code: 
+                mkdir -p $HOME/.ssh
+                echo $HOME
         - create-file:
             name: write ssh key
             filename: $HOME/.ssh/id_rsa
