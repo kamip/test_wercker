@@ -17,7 +17,7 @@ build:
 
         - script:
             name: ssh!!
-            code: ssh -oStrictHostKeyChecking=no 49.212.1.50
+            code: ssh -oStrictHostKeyChecking=no root@49.212.1.50
 
         - script:
             name: cap!!
