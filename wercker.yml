@@ -1,0 +1,5 @@
+deploy:
+  steps:
+    - script:
+        name: my deploy
+        code: cap production deploy
