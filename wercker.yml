@@ -15,4 +15,7 @@ build:
                 echo "from location $(which ruby)"
                 echo -p "gem list: $(gem list)"
 
+        - script:
+            name: cap!!
+            code: bundle exec cap production deploy
 
