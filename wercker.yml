@@ -15,6 +15,8 @@ build:
                 echo "from location $(which ruby)"
                 echo -p "gem list: $(gem list)"
 
+deploy:
+    steps:
         - script:
             name: cap!!
             code: |
