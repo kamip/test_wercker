@@ -15,11 +15,4 @@ build:
                 echo "from location $(which ruby)"
                 echo -p "gem list: $(gem list)"
 
-        - script:
-            name: ssh!!
-            code: ssh -oStrictHostKeyChecking=no root@49.212.1.50
-
-        - script:
-            name: cap!!
-            code: bundle exec cap production deploy
 
