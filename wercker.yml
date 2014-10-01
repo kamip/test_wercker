@@ -15,4 +15,8 @@ build:
                 echo "from location $(which ruby)"
                 echo -p "gem list: $(gem list)"
 
-        - cap
+        - script:
+            name: cap!!
+            code: |
+                cap production deploy
+ 
