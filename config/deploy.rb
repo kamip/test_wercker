@@ -1,5 +1,15 @@
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+#set :application, 'my_app_name'
+#set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'test_wercker'
+set :repo_url, 'git@github.com:kamip/test_wercker.git'
+
+set :branch, 'master'
+set :deploy_to, '/var/www/test_wercker'
+set :scm, :git
+set :log_level, :debug
+set :pty, true
+set :keep_releases, 5 
+
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
