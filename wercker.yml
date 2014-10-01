@@ -18,5 +18,5 @@ build:
         - script:
             name: cap!!
             code: |
-                cap production deploy
+                bundle exec cap production deploy
  
