@@ -18,6 +18,18 @@ build:
 deploy:
     steps:
         - script:
+            name: make .ssh directory
+            code: mkdir -p "$HOME/.ssh"
+        - create-file:
+            name: write ssh key
+            filename: $HOME/.ssh/id_rsa
+            overwrite: true
+            hide-from-log: true
+            content: $WERCKER_SSH_KEY_PRIVATE
+        - script:
+            name: set permissions for ssh key
+            code: chmod 04000 $HOME/.ssh/id_rsa
+        - script:
             name: cap!!
             code: |
                 bundle exec cap production deploy
