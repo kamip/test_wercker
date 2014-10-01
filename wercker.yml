@@ -1,3 +1,4 @@
+box: wercker/rvm
 deploy:
   steps:
     - script:
