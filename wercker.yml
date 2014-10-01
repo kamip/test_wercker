@@ -19,7 +19,7 @@ deploy:
     steps:
         - script:
             name: make .ssh directory
-            code: 
+            code: |
                 mkdir -p $HOME/.ssh
                 echo $HOME
         - create-file:
