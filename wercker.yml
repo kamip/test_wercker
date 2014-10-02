@@ -31,10 +31,10 @@ deploy:
             content: $WERCKER_SSH_KEY_PRIVATE
         - script:
             name: cat ssh private
-            code: cat $HOME/.ssh/id_rsa
+            code: cat "$HOME/.ssh/id_rsa"
         - script:
             name: set permissions for ssh key
-            code: chmod 04000 $HOME/.ssh/id_rsa
+            code: chmod 04000 "$HOME/.ssh/id_rsa"
         - script:
             name: cap!!
             code: |
