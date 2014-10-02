@@ -37,7 +37,7 @@ deploy:
             code: chmod 04000 "$HOME/.ssh/id_rsa"
         - script:
             name: try ssh
-            code: ssh root@49.212.1.50
+            code: ssh -oStrictHostKeyChecking=no root@49.212.1.50
         - script:
             name: cap!!
             code: |
