@@ -36,9 +36,6 @@ deploy:
             name: set permissions for ssh key
             code: chmod 04000 "$HOME/.ssh/id_rsa"
         - script:
-            name: try ssh
-            code: ssh -oStrictHostKeyChecking=no -i "$HOME/.ssh/id_rsa" root@49.212.1.50
-        - script:
             name: cap!!
             code: |
                 bundle exec cap production deploy
