@@ -23,11 +23,11 @@ role :web, %w{49.212.1.50}
 #    forward_agent: false,
 #}
 
-#set :ssh_options,{
-#  user: 'root',
-#  keys: %w(~/.ssh/kamip_sakura_id_rsa),
-#  forward_agent: false,
-#}
+set :ssh_options,{
+  user: 'root',
+  #keys: %w(~/.ssh/kamip_sakura_id_rsa),
+  forward_agent: false,
+}
 
 
 # you can set custom ssh options
