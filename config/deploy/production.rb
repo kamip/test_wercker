@@ -26,6 +26,7 @@ role :web, %w{49.212.1.50}
 set :ssh_options,{
   user: 'root',
   #keys: %w(~/.ssh/kamip_sakura_id_rsa),
+  keys: %w(~/.ssh/id_rsa),
   forward_agent: false,
 }
 
